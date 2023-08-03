@@ -68,13 +68,20 @@ textarea {
 
 input {
     text-align: center;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
 }
 
 ::-webkit-input-placeholder {
     text-align: center;
     color: rgb(0, 0, 0);
+    font-weight: bold;
 }
 
 :-moz-placeholder {
     text-align: center;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
 }

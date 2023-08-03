@@ -35,7 +35,7 @@ summary {
 
 
 .header {
-    background-image: url("../img/headerImg.png");
+    background-image: url("../img/headerGif.gif");
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
@@ -688,6 +688,7 @@ input[type="button"]:focus {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    border-radius: 25px;
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;

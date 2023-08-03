@@ -2307,8 +2307,12 @@ input:focus {
 }
 
 #cardStat:hover{
-    color: red;
-    background: red;
+    background: #000000;
+    border-radius: 25px;
+    color: white;
+}
+#cardStatTitle:hover{
+    color: white;
 }
 
 /*Benefit Cards End*/

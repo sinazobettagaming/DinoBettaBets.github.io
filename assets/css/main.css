@@ -2143,6 +2143,8 @@ input:focus {
     background-size: cover;
     background-position: center;
     transition: transform 0.2s;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 }
 
 .blogBenefit-card .details,
@@ -2205,6 +2207,8 @@ input:focus {
     background: #fff;
     position: relative;
     z-index: 1;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 
 .blogBenefit-card .descriptionBlog h1,

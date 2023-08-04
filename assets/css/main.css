@@ -238,7 +238,6 @@ body {
     font-size: 14px;
     line-height: 1.6;
     font-family: 'Poppins', sans-serif;
-    color: #9e9e9e;
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
     overflow-x: hidden
@@ -729,6 +728,7 @@ input[type="button"]:focus {
 .navigation__list>li a:hover {
     color: #ffffff;
     font-weight: bold;
+    font-size: 15px;
 }
 
 .navigation__burger {

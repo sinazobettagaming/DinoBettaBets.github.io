@@ -8,7 +8,7 @@
 }
 
 form {
-    background: #FFE600;
+    background: #ffffff;
     width: 40em;
     padding: 30px;
     font-size: 18px;
@@ -43,6 +43,7 @@ textarea {
     outline: none;
     border-radius: 10px;
     height: 40px;
+    border: 1px solid #000000;
 }
 
 #input-field {

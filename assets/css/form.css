@@ -72,13 +72,13 @@ input {
     text-align: center;
     text-align: center;
     color: rgb(121, 121, 121);
-    
+
 }
 
 ::-webkit-input-placeholder {
     text-align: center;
     color: rgb(121, 121, 121);
-    
+
 }
 
 :-moz-placeholder {

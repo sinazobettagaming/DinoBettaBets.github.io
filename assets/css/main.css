@@ -42,6 +42,23 @@ summary {
     background-size: cover;
 }
 
+.background-image-1{
+    background-image: url("../img/headerImg2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover; 
+}
+
+.background-image-2{
+    background-image: url("../img/headerImg3.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover; 
+}
+
+
 audio,
 canvas,
 progress,

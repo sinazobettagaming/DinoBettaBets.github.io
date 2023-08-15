@@ -2168,6 +2168,36 @@ input:focus {
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
 }
+#Benefits{
+    background-image: url("../img/BenHeader.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover; 
+}
+
+#StatsCard1{
+    background-image: url("../img/BettaShop.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover; 
+}
+#StatsCard2{
+    background-image: url("../img/BettaHuman.png");
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover; 
+}
+
+#StatsCard3{
+    background-image: url("../img/BettaTickets.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover; 
+}
+
 
 .blogBenefit-card .details,
 .blogBenefit-card .details ul {

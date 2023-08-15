@@ -482,7 +482,11 @@
 					pagination: {
 						el: '.blog-slider__pagination',
 						clickable: true,
-					}
+					},
+					autoplay: {
+						delay: 5000, // Auto change every 5 seconds
+						disableOnInteraction: false, // Allow user interaction to pause autoplay
+					},
 				});
 
 			</script>
@@ -573,8 +577,8 @@
 
 				<!-- Stats card -->
 				<div class="col s12 m4">
-					<a href="#" class="stats-card">
-						<i style="color:#FFE600;" class="bi bi-shop-window"></i>
+					<a href="#" class="stats-card" id="StatsCard1">
+
 						<span class="counter">25</span>
 						<div class="title">Retail Stores</div>
 					</a>
@@ -583,8 +587,8 @@
 
 				<!-- Stats card -->
 				<div class="col s12 m4">
-					<a href="#" class="stats-card">
-						<i style="color:#FFE600;" class="bi bi-people-fill"></i>
+					<a href="#" class="stats-card" id="StatsCard2">
+
 						<span class="counter">800+</span>
 						<div class="title">Employees</div>
 					</a>
@@ -593,8 +597,8 @@
 
 				<!-- Stats card -->
 				<div class="col s12 m4">
-					<a href="#" class="stats-card">
-						<i style="color:#FFE600;" class="bi bi-ticket-perforated"></i>
+					<a href="#" class="stats-card" id="StatsCard3">
+
 						<span class="counter">9000+</span>
 						<div class="title">Tickets sold a month</div>
 					</a>

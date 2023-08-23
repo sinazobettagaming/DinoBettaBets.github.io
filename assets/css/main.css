@@ -1817,7 +1817,7 @@ input[type="button"]:focus {
 
 .footer__arrow-el {
     width: 24px;
-    fill: #FFC800;
+    fill: #ffffff;
 }
 
 @media (max-width: 767px) {

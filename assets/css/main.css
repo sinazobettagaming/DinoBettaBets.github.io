@@ -2006,6 +2006,7 @@ h1 {
 
 .card:hover {
     transform: scale(1.05);
+    background-color: #FFE600;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -2368,3 +2369,11 @@ input:focus {
 #cardStatTitle:hover {
     color: white;
 }
+
+@media screen and (max-width: 400px) {
+    .header{
+    background-image: url('../img/MobileHeader.png');
+    background-repeat: no-repeat;
+    background-size: 300px;
+}
+  }

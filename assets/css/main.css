@@ -2170,11 +2170,11 @@ input:focus {
     border-top-right-radius: 25px;
 }
 #Benefits{
-    background-image: url("../img/BenHeader.png");
+    /* background-image: url("../img/BenHeader.png");
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    background-size: cover;
+    background-size: cover; */
 }
 
 #StatsCard1{

@@ -2374,6 +2374,6 @@ input:focus {
     .header{
     background-image: url('../img/MobileHeader.png');
     background-repeat: no-repeat;
-    background-size: 300px;
+    /* background-size: 350px; */
 }
   }

@@ -2370,7 +2370,7 @@ input:focus {
     color: white;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
     .header{
     background-image: url('../img/MobileHeader.png');
     background-repeat: no-repeat;

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <title>Position Size Calculator</title>
 </head>
 <body>
     <div class="calculator-container">
@@ -13,73 +14,33 @@
             <input type="number" id="usdAmount" placeholder="Enter USD amount">
         </div>
         <div>
-            <label for="stopLossAmount">Stop Loss Amount:</label>
-            <input type="number" id="stopLossAmount" placeholder="Enter stop loss amount">
+            <label for="stopLossPercentage"><strong>Risk </strong>Ratio:</label>
+            <input type="number" id="stopLossPercentage" step="0.1" placeholder="Ratio: 1">
         </div>
-        <button onclick="calculatePositionSize()">Calculate Position Size</button>
-        <p id="result"></p>
+        <div>
+            <label for="riskToRewardRatio"><strong>Reward </strong>Ratio:</label>
+            <input type="number" id="riskToRewardRatio" step="0.1" placeholder="Ratio: 2">
+        </div>
+        <div>
+            <label for="positionType">Position Type:</label>
+            <select id="positionType">
+                <option value="long">Long</option>
+                <option value="short">Short</option>
+            </select>
+        </div>
+        <div>
+            <label for="currentPrice">Current Market Price:</label>
+            <input type="number" id="currentPrice" step="0.0001" placeholder="Enter current price">
+        </div>
+        <button onclick="calculatePositionSize()">Calculate</button>
+        <p id="stopLoss"></p>
+        <p id="close10Percent"></p>
+        <p id="close80Percent"></p>
     </div>
+    <!-- ... (other HTML code) ... -->
+<div id="resultContainer"></div>
+<!-- ... (other HTML code) ... -->
+
     <script src="script.js"></script>
 </body>
 </html>
-
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-}
-
-.calculator-container {
-    text-align: center;
-    max-width: 80%;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-input, button {
-    margin-top: 10px;
-    padding: 8px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-button {
-    cursor: pointer;
-}
-
-#result {
-    font-weight: bold;
-    margin-top: 20px;
-}
-
-</style>
-
-<script>
-  function calculatePositionSize() {
-    var usdAmount = document.getElementById('usdAmount').value;
-    var stopLossAmount = document.getElementById('stopLossAmount').value;
-    var resultElement = document.getElementById('result');
-
-    try {
-        usdAmount = parseFloat(usdAmount);
-        stopLossAmount = parseFloat(stopLossAmount);
-
-        if (isNaN(usdAmount) || isNaN(stopLossAmount)) {
-            throw new Error("Please enter valid numerical values for USD amount and stop-loss amount.");
-        }
-
-        var positionSize = usdAmount / stopLossAmount;
-        resultElement.textContent = "Position Size: " + positionSize.toFixed(2) + " units";
-    } catch (error) {
-        resultElement.textContent = error.message;
-    }
-}
-
-</script>

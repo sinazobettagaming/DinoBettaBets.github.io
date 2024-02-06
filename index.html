@@ -5,15 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Trading View</title>
 </head>
 
 <body>
     <div class="calculator-container">
-        <h1>Position Size Calculator</h1>
+        <h1>Position Calculator</h1>
+        <p>v [1.8]</p>
         <div>
             <label for="usdAmount">USD Amount:</label>
             <input type="number" id="usdAmount" placeholder="Enter USD amount">
+        </div>
+        <div>
+            <label for="stopValue">Stop Value:</label>
+            <input type="number" id="stopValue" step="0.0001" placeholder="Enter stop value">
         </div>
         <div>
             <label for="stopLossPercentage"><strong>Risk </strong>Ratio:</label>

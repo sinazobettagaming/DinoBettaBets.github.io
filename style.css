@@ -1,6 +1,6 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f2f2f2;
+  background-color: #525252;
   margin: 0;
 }
 
@@ -9,11 +9,13 @@ body {
   max-width: 80%;
   margin: 3vh auto 50px; /* Center vertically with top margin and additional bottom margin */
   padding: 20px;
-  background-color: #fff;
-  border: 1px solid #ddd;
+  background-color: #ffffff;
+  border: 1px solid #000000;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+
 
 input, select, button {
   margin-top: 10px;
@@ -26,13 +28,13 @@ input, select, button {
 
 button {
   cursor: pointer;
-  background-color: #3498db;
-  color: #fff;
+  color: gold; background-color: black; padding: 10px; text-align: center; border-radius: 10px;
   transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: #2980b9;
+  background-color: #16f802;
+  color: rgb(0, 0, 0);
 }
 
 #resultContainer {
@@ -40,7 +42,7 @@ button:hover {
   margin-top: 10px;
   padding: 20px;
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid #16f802;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin: auto;

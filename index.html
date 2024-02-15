@@ -9,33 +9,39 @@
 
 <body>
     <div class="calculator-container">
-        <h1 style="color: gold; background-color: black; padding: 10px; text-align: center; border-radius: 10px;">Crypto Cartel Calc.</h1>
+        <h1 style="color: gold; background-color: black; padding: 10px; text-align: center; border-radius: 10px;">Crypto
+            Cartel Calc.</h1>
 
         <p>v [1.9]</p>
         <p>~<strong> 15m </strong>Trade Volume~</p>
         <div>
             <br>
-            <label for="usdAmount">USD Amount:</label>
+            <label for="usdAmount"><strong>USD Amount:</strong></label>
             <input style="border: 2px solid #000000" type="number" id="usdAmount" placeholder="Enter USD amount">
         </div>
         <div>
             <br>
-            <label for="stopValue">Stop Value:</label>
-            <input style="border: 2px solid #000000" type="number" id="stopValue" step="0.0001" placeholder="Enter stop value">
+            <label for="stopValue"><strong>Stop Value:</strong></label>
+            <input style="border: 2px solid #000000" type="number" id="stopValue" step="0.0001"
+                placeholder="Enter stop value">
         </div>
         <div>
             <br>
-            <label for="stopLossPercentage"><strong>Risk </strong>Ratio:</label>
-            <input style="border: 2px solid #000000" type="number" id="stopLossPercentage" step="0.1" placeholder="Eg: Ratio: 1">
+            <label for="stopLossPercentage"><strong><span style="color: rgb(255, 0, 0);">Risk</span>
+                    Ratio:</strong></label>
+            <input style="border: 2px solid #000000" type="number" id="stopLossPercentage" step="0.1"
+                placeholder="Eg: Ratio: 1">
         </div>
         <div>
             <br>
-            <label for="riskToRewardRatio"><strong>Reward </strong>Ratio:</label>
-            <input style="border: 2px solid #000000" type="number" id="riskToRewardRatio" step="0.1" placeholder="Eg: Ratio: 2">
+            <label for="riskToRewardRatio"><strong><span style="color: rgb(27, 220, 17);">Reward</span>
+                    Ratio:</strong></label>
+            <input style="border: 2px solid #000000" type="number" id="riskToRewardRatio" step="0.1"
+                placeholder="Eg: Ratio: 2">
         </div>
         <div>
             <br>
-            <label for="positionType">Position Type:</label>
+            <label for="positionType"><strong>Position Type:</strong></label>
             <select style="border: 2px solid #000000" id="positionType">
                 <option value="long">Long</option>
                 <option value="short">Short</option>
@@ -43,20 +49,26 @@
         </div>
         <div>
             <br>
-            <label for="currentPrice">Current Coin Value:</label>
-            <input style="border: 2px solid #000000" type="number" id="currentPrice" step="0.0001" placeholder="Enter current price">
+            <label for="currentPrice"><strong>Current Coin Value:</strong></label>
+            <input style="border: 2px solid #000000" type="number" id="currentPrice" step="0.0001"
+                placeholder="Enter current price">
         </div>
         <br>
         <div style="text-align: center;">
-            <button onclick="calculatePositionSize()" style="padding: 1em; font-size: 20px;"> <strong>GO</strong></button>
-          </div>
+            <button onclick="calculatePositionSize()" style="padding: 1em; font-size: 20px;">
+                <strong>GO</strong></button>
+        </div>
         <p id="stopLoss"></p>
         <p id="close10Percent"></p>
         <p id="close80Percent"></p>
     </div>
 
     <div id="resultContainer"></div>
-
+    <!-- Footer -->
+    <br>
+    <footer style="text-align: center; padding: 10px; background-color: #525252; color: gold;">
+        <p>&copy; 2024 Crypto Cartel - Made with ❤️ by Costandino. All rights reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>

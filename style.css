@@ -1,55 +1,70 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #525252;
+  font-family: "Open Sans", sans-serif;
+  background-color: #7e7b7b;
   margin: 0;
+  background: linear-gradient(145deg, #e0e0e0, #f8f8f8);
 }
 
 .calculator-container {
   text-align: center;
   max-width: 80%;
-  margin: 3vh auto 50px; /* Center vertically with top margin and additional bottom margin */
+  margin: 3vh auto 50px;
   padding: 20px;
-  background-color: #ffffff;
-  border: 1px solid #000000;
+  background-color: #f0f0f0;
+  border: 1px solid #d1d1d11f;
+  border-radius: 12px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1), -3px -3px 6px rgba(255, 255, 255, 0.8);
+}
+
+input,
+select {
+  background: #f0f0f0;
+  border: 1px solid #d1d1d1;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-
-
-input, select, button {
+  padding: 12px;
   margin-top: 10px;
-  padding: 10px;
-  width: calc(100% - 20px);
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  width: calc(100% - 25px);
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1), inset -2px -2px 4px rgba(255, 255, 255, 0.8);
 }
+
 
 button {
   cursor: pointer;
-  color: gold; background-color: black; padding: 10px; text-align: center; border-radius: 10px;
-  transition: background-color 0.3s;
+  transition: background-color 0.4s;
+  background-color: #f0f0f0;
+  border: 2px solid #d1d1d123;
+  border-radius: 12px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1), -3px -3px 6px rgba(255, 255, 255, 0.8);
 }
 
 button:hover {
-  background-color: #16f802;
-  color: rgb(0, 0, 0);
+  background-color: #333;
+  color: gold;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), -2px -2px 4px rgba(255, 255, 255, 0.8);
 }
+
 
 #resultContainer {
   text-align: left;
   margin-top: 10px;
   padding: 20px;
-  background-color: #fff;
-  border: 1px solid #16f802;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
   margin: auto;
   max-width: 80%;
+  background-color: #f0f0f0;
+  border: 2px solid #d1d1d126;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1), -3px -3px 6px rgba(255, 255, 255, 0.8);
 }
 
-#stopLoss, #close10Percent, #close80Percent {
+#close10Percent,
+#close80Percent {
   font-weight: bold;
   color: #333;
+}
+
+.neumorphic-label {
+  background: linear-gradient(145deg, #e0e0e000, #f8f8f800);
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1), -3px -3px 6px rgba(255, 255, 255, 0.8);
 }

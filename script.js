@@ -31,8 +31,6 @@ function calculatePositionSize() {
         return;
     }
 
-
-  
   var stopLossAmount = currentPrice * (stopLossPercentage / 100);
 
 

@@ -16,42 +16,53 @@
         <p>~<strong> 15m </strong>Trade Volume ~</p>
         <style>
             @media (max-width: 600px) {
+                .button-container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
                 a {
-                    display: block;
+                    text-align: center;
                     margin: 10px 0;
                 }
-        
+
                 button {
+                    flex-grow: 1;
+                    max-width: 200px;
+                    /* Adjust the maximum width as needed */
                     width: 100%;
-                    margin: 0;
+                    margin: 0 5px;
                 }
             }
         </style>
-        
-        <a href="prices.html">
-            <button style="cursor: pointer;
-                            transition: background-color 0.4s;
-                            background-color: #f0f0f0;
-                            border: 2px solid #d1d1d123;
-                            border-radius: 12px;
-                            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1), -3px -3px 6px rgba(255, 255, 255, 0.8);
-                            padding: 1em; font-size: 20px; margin-right: 10px;">
-                LIVE PRICES
-            </button>
-        </a>
-        
-        <a href="timer.html">
-            <button style="cursor: pointer;
-                            transition: background-color 0.4s;
-                            background-color: #f0f0f0;
-                            border: 2px solid #d1d1d123;
-                            border-radius: 12px;
-                            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1), -3px -3px 6px rgba(255, 255, 255, 0.8);
-                            padding: 1em; font-size: 20px; margin-left: 10px;">
-                TRADING HOURS
-            </button>
-        </a>
-        
+
+        <div class="button-container">
+            <a href="prices.html">
+                <button style="cursor: pointer;
+                        transition: background-color 0.4s;
+                        background-color: #f0f0f0;
+                        border: 2px solid #d1d1d123;
+                        border-radius: 12px;
+                        box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1), -3px -3px 6px rgba(255, 255, 255, 0.8);
+                        padding: 1em; font-size: 20px;">
+                    LIVE PRICES
+                </button>
+            </a>
+
+            <a href="timer.html">
+                <button style="cursor: pointer;
+                        transition: background-color 0.4s;
+                        background-color: #f0f0f0;
+                        border: 2px solid #d1d1d123;
+                        border-radius: 12px;
+                        box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1), -3px -3px 6px rgba(255, 255, 255, 0.8);
+                        padding: 1em; font-size: 20px;">
+                    TRADING HOURS
+                </button>
+            </a>
+        </div>
+
         <p>v [2.2]</p>
         <div>
             <br>

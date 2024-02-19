@@ -14,36 +14,46 @@
             style="background-color: #f0f0f0; border: 2px solid #d1d1d100; border-radius: 16px; box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.8); padding: 10px; text-align: center; border-radius: 10px;">
             CRYPTO CARTEL CALC.</h1>
         <p>~<strong> 15m </strong>Trade Volume ~</p>
-        <p>v [2.0]</p>
+        <a href="prices.html">
+            <button style=" cursor: pointer;
+            transition: background-color 0.4s;
+            background-color: #f0f0f0;
+            border: 2px solid #d1d1d123;
+            border-radius: 12px;
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1), -3px -3px 6px rgba(255, 255, 255, 0.8);
+            padding: 1em; font-size: 20px;">
+                LIVE PRICES
+            </button>
+        </a>
+        <p>v [2.1]</p>
         <div>
             <br>
             <label class="neumorphic-label" for="usdAmount"><strong>USD Amount:</strong></label>
-            <input  type="number" id="usdAmount" placeholder="Enter USD amount">
+            <input type="number" id="usdAmount" placeholder="Enter USD amount">
         </div>
         <div>
             <br>
             <label class="neumorphic-label" for="stopValue"><strong>Stop Value:</strong></label>
-            <input type="number" id="stopValue" step="0.0001"
-                placeholder="Enter stop value">
+            <input type="number" id="stopValue" step="0.0001" placeholder="Enter stop value">
         </div>
         <div>
             <br>
-            <label class="neumorphic-label" for="stopLossPercentage"><strong><span style="color: rgb(223, 67, 67);">Risk</span>
+            <label class="neumorphic-label" for="stopLossPercentage"><strong><span
+                        style="color: rgb(223, 67, 67);">Risk</span>
                     Ratio:</strong></label>
-            <input type="number" id="stopLossPercentage" step="0.1"
-                placeholder="Eg: Ratio: 1">
+            <input type="number" id="stopLossPercentage" step="0.1" placeholder="Eg: Ratio: 1">
         </div>
         <div>
             <br>
-            <label class="neumorphic-label" for="riskToRewardRatio"><strong><span style="color: rgb(56, 222, 47);">Reward</span>
+            <label class="neumorphic-label" for="riskToRewardRatio"><strong><span
+                        style="color: rgb(56, 222, 47);">Reward</span>
                     Ratio:</strong></label>
-            <input type="number" id="riskToRewardRatio" step="0.1"
-                placeholder="Eg: Ratio: 2">
+            <input type="number" id="riskToRewardRatio" step="0.1" placeholder="Eg: Ratio: 2">
         </div>
         <div>
             <br>
             <label class="neumorphic-label" for="positionType"><strong>Position Type:</strong></label>
-            <select  id="positionType">
+            <select id="positionType">
                 <option value="long">Long</option>
                 <option value="short">Short</option>
             </select>
@@ -51,8 +61,7 @@
         <div>
             <br>
             <label class="neumorphic-label" for="currentPrice"><strong>Current Coin Value:</strong></label>
-            <input type="number" id="currentPrice" step="0.0001"
-                placeholder="Enter current price">
+            <input type="number" id="currentPrice" step="0.0001" placeholder="Enter current price">
         </div>
         <br>
         <div style="text-align: center;">

@@ -24,7 +24,7 @@ function calculatePositionSize() {
     var riskToRewardRatio = parseFloat(document.getElementById("riskToRewardRatio").value);
     var positionType = document.getElementById("positionType").value;
     var currentPrice = parseFloat(document.getElementById("currentPrice").value);
-    var stopValue = parseFloat(document.getElementById("stopValue").value); // Add this line
+    var stopValue = parseFloat(document.getElementById("stopValue").value); 
 
     if (isNaN(usdAmount) || isNaN(stopLossPercentage) || isNaN(riskToRewardRatio) || isNaN(currentPrice) || isNaN(stopValue)) {
         displayResult(["Please enter valid numerical values for all fields."]);
@@ -32,17 +32,17 @@ function calculatePositionSize() {
     }
 
 
-  // Convert stop loss percentage to an absolute value
+  
   var stopLossAmount = currentPrice * (stopLossPercentage / 100);
 
-  // Adjust stopLoss direction based on position type
+
   var stopLoss =
     positionType === "long"
       ? currentPrice - stopLossAmount
       : currentPrice + stopLossAmount;
   var targetProfit = riskToRewardRatio * stopLossAmount;
 
-  // Adjust close profits based on position type
+  
   var close10Percent =
     positionType === "long"
       ? currentPrice + 0.1 * targetProfit
@@ -58,6 +58,6 @@ function calculatePositionSize() {
     `Stop Loss: ${stopLoss.toFixed(4)}`,
     `Close 10% Profit: ${close10Percent.toFixed(4)}`,
     `Close 80% Profit: ${close80Percent.toFixed(4)}`,
-    `Position Size: ${positionSize.toFixed(4)} units`, // Display the position size in units
+    `Position Size: ${positionSize.toFixed(4)} units`, 
 ]);
 }

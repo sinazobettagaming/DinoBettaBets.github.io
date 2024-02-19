@@ -20,7 +20,7 @@
       padding: 10px;
       border-radius: 10px;
       box-shadow: 5px 5px 10px #b0b0b0, -5px -5px 10px #ffffff;
-      max-width: 300px; /* Adjust the max-width as needed */
+      max-width: 300px;
       margin: auto;
     }
 
@@ -91,13 +91,13 @@
     let startLeft = start - now;
     let endLeft = end - now;
 
-    // Adjust for negative countdown
+    //njegative countdown
     if (startLeft < 0) {
-      startLeft += 24 * 60 * 60 * 1000; // Add 24 hours in milliseconds
+      startLeft += 24 * 60 * 60 * 1000; 
     }
 
     if (endLeft < 0) {
-      endLeft += 24 * 60 * 60 * 1000; // Add 24 hours in milliseconds
+      endLeft += 24 * 60 * 60 * 1000; 
     }
 
     const startHours = Math.floor((startLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));

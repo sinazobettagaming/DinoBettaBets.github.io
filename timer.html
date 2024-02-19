@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trading Session Countdown</title>
+  <style>
+ body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      margin: 20px;
+      background-color: #f0f0f0;
+    }
+
+    .timer {
+      font-size: 24px;
+      margin-bottom: 10px;
+      background-color: #f0f0f0;
+      border: 2px solid #d1d1d123;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 5px 5px 10px #b0b0b0, -5px -5px 10px #ffffff;
+      max-width: 300px; /* Adjust the max-width as needed */
+      margin: auto;
+    }
+
+    h2 {
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .timer {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="back-button">
+    <button style="cursor: pointer;
+                  transition: background-color 0.4s;
+                  background-color: #f0f0f0;
+                  border: 2px solid #d1d1d123;
+                  border-radius: 12px;
+                  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1), -3px -3px 6px rgba(255, 255, 255, 0.8);
+                  padding: 1em; font-size: 20px;">
+      BACK
+    </button>
+  </a>
+  <div>
+    <h2>New York Trading Session</h2>
+    <div id="newYorkStartCountdown" class="timer"></div>
+    <br>
+    <div id="newYorkEndCountdown" class="timer"></div>
+  </div>
+
+  <div>
+    <h2>Tokyo Trading Session</h2>
+    <div id="tokyoStartCountdown" class="timer"></div>
+    <br>
+    <div id="tokyoEndCountdown" class="timer"></div>
+  </div>
+
+  <div>
+    <h2>London Trading Session</h2>
+    <div id="londonStartCountdown" class="timer"></div>
+    <br>
+    <div id="londonEndCountdown" class="timer"></div>
+  </div>
+
+  <div>
+    <h2>Sydney Trading Session</h2>
+    <div id="sydneyStartCountdown" class="timer"></div>
+    <br>
+    <div id="sydneyEndCountdown" class="timer"></div>
+  </div>
+</body>
+</html>
+
+
+
+<script>
+  function updateCountdown(startTime, endTime, startElementId, endElementId) {
+    const now = new Date();
+    const start = new Date(now);
+    start.setUTCHours(startTime.getHours(), startTime.getMinutes(), 0, 0);
+
+    const end = new Date(now);
+    end.setUTCHours(endTime.getHours(), endTime.getMinutes(), 0, 0);
+
+    let startLeft = start - now;
+    let endLeft = end - now;
+
+    // Adjust for negative countdown
+    if (startLeft < 0) {
+      startLeft += 24 * 60 * 60 * 1000; // Add 24 hours in milliseconds
+    }
+
+    if (endLeft < 0) {
+      endLeft += 24 * 60 * 60 * 1000; // Add 24 hours in milliseconds
+    }
+
+    const startHours = Math.floor((startLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const startMinutes = Math.floor((startLeft % (1000 * 60 * 60)) / (1000 * 60));
+    const startSeconds = Math.floor((startLeft % (1000 * 60)) / 1000);
+
+    const endHours = Math.floor((endLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const endMinutes = Math.floor((endLeft % (1000 * 60 * 60)) / (1000 * 60));
+    const endSeconds = Math.floor((endLeft % (1000 * 60)) / 1000);
+
+    const startCountdownElement = document.getElementById(startElementId);
+    startCountdownElement.innerHTML = `Starts in ${startHours}h ${startMinutes}m ${startSeconds}s`;
+
+    const endCountdownElement = document.getElementById(endElementId);
+    endCountdownElement.innerHTML = `Ends in ${endHours}h ${endMinutes}m ${endSeconds}s`;
+
+    setTimeout(() => updateCountdown(startTime, endTime, startElementId, endElementId), 1000);
+  }
+
+  const sydneyOpen = { getHours: () => 21, getMinutes: () => 0 }; // 11:00 PM SAST
+  const sydneyClose = { getHours: () => 8, getMinutes: () => 0 }; // 8:00 AM SAST
+
+  const tokyoOpen = { getHours: () => 2, getMinutes: () => 0 }; // 2:00 AM SAST
+  const tokyoClose = { getHours: () => 11, getMinutes: () => 0 }; // 11:00 AM SAST
+
+  const londonOpen = { getHours: () => 9, getMinutes: () => 0 }; // 9:00 AM SAST
+  const londonClose = { getHours: () => 18, getMinutes: () => 0 }; // 6:00 PM SAST
+
+  const newYorkOpen = { getHours: () => 15, getMinutes: () => 0 }; // 3:00 PM SAST
+  const newYorkClose = { getHours: () => 0, getMinutes: () => 0 }; // 12:00 AM SAST
+
+  updateCountdown(sydneyOpen, sydneyClose, 'sydneyStartCountdown', 'sydneyEndCountdown');
+  updateCountdown(tokyoOpen, tokyoClose, 'tokyoStartCountdown', 'tokyoEndCountdown');
+  updateCountdown(londonOpen, londonClose, 'londonStartCountdown', 'londonEndCountdown');
+  updateCountdown(newYorkOpen, newYorkClose, 'newYorkStartCountdown', 'newYorkEndCountdown');
+</script>
+
+</body>
+</html>

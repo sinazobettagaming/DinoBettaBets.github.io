@@ -20,19 +20,28 @@ function displayResult(results) {
 
 function calculatePositionSize() {
   var usdAmount = parseFloat(document.getElementById("usdAmount").value);
-    var stopLossPercentage = parseFloat(document.getElementById("stopLossPercentage").value);
-    var riskToRewardRatio = parseFloat(document.getElementById("riskToRewardRatio").value);
-    var positionType = document.getElementById("positionType").value;
-    var currentPrice = parseFloat(document.getElementById("currentPrice").value);
-    var stopValue = parseFloat(document.getElementById("stopValue").value); 
+  var stopLossPercentage = parseFloat(
+    document.getElementById("stopLossPercentage").value
+  );
+  var riskToRewardRatio = parseFloat(
+    document.getElementById("riskToRewardRatio").value
+  );
+  var positionType = document.getElementById("positionType").value;
+  var currentPrice = parseFloat(document.getElementById("currentPrice").value);
+  var stopValue = parseFloat(document.getElementById("stopValue").value);
 
-    if (isNaN(usdAmount) || isNaN(stopLossPercentage) || isNaN(riskToRewardRatio) || isNaN(currentPrice) || isNaN(stopValue)) {
-        displayResult(["Please enter valid numerical values for all fields."]);
-        return;
-    }
+  if (
+    isNaN(usdAmount) ||
+    isNaN(stopLossPercentage) ||
+    isNaN(riskToRewardRatio) ||
+    isNaN(currentPrice) ||
+    isNaN(stopValue)
+  ) {
+    displayResult(["Please enter valid numerical values for all fields."]);
+    return;
+  }
 
   var stopLossAmount = currentPrice * (stopLossPercentage / 100);
-
 
   var stopLoss =
     positionType === "long"
@@ -40,7 +49,6 @@ function calculatePositionSize() {
       : currentPrice + stopLossAmount;
   var targetProfit = riskToRewardRatio * stopLossAmount;
 
-  
   var close10Percent =
     positionType === "long"
       ? currentPrice + 0.1 * targetProfit
@@ -56,6 +64,6 @@ function calculatePositionSize() {
     `Stop Loss: ${stopLoss.toFixed(4)}`,
     `Close 10% Profit: ${close10Percent.toFixed(4)}`,
     `Close 80% Profit: ${close80Percent.toFixed(4)}`,
-    `Position Size: ${positionSize.toFixed(4)} units`, 
-]);
+    `Position Size: ${positionSize.toFixed(4)} units`,
+  ]);
 }

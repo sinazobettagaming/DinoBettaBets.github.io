@@ -12,7 +12,8 @@
     <div class="calculator-container">
         <h1
             style="background-color: #f0f0f0; border: 2px solid #d1d1d100; border-radius: 16px; box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.8); padding: 10px; text-align: center; border-radius: 10px;">
-            CRYPTO CARTEL CALC.</h1>
+            CRYPTO CARTEL CALC <span style="font-size: small; font-weight: 100; color: rgb(251, 20, 20);">v2.2</span>
+        </h1>
         <p>~<strong> 15m </strong>Trade Volume ~</p>
         <style>
             @media (max-width: 600px) {
@@ -38,7 +39,7 @@
 
         <div class="button-container">
             <a href="prices.html">
-                <button style="cursor: pointer;
+                <button id="topButton" style="cursor: pointer;
                         transition: background-color 0.4s;
                         background-color: #f0f0f0;
                         border: 2px solid #d1d1d123;
@@ -50,7 +51,7 @@
             </a>
 
             <a href="timer.html">
-                <button style="cursor: pointer;
+                <button id="topButton" style="cursor: pointer;
                         transition: background-color 0.4s;
                         background-color: #f0f0f0;
                         border: 2px solid #d1d1d123;
@@ -60,9 +61,8 @@
                     TRADING HOURS
                 </button>
             </a>
+            <div></div>
         </div>
-
-        <p>v [2.2]</p>
         <div>
             <br>
             <label class="neumorphic-label" for="usdAmount"><strong>USD Amount:</strong></label>

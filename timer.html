@@ -3,7 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -11,14 +13,23 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
       margin: 0;
+      padding: 0;
       background-color: #f0f0f0;
     }
 
-    .session {
+    .calculator-container {
       width: 80%;
-      max-width: 300px;
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .back-button {
+      margin-top: 20px;
+    }
+
+    .session {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -30,37 +41,88 @@
       box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
     }
 
-    .live {
-      background: linear-gradient(45deg, #3ce041, #33d13b);
-      color: #FFFFFF;
+    .live,
+    .upcoming {
       border-radius: 10px;
       box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
       padding: 7px 20px;
     }
 
+    .live {
+      background: linear-gradient(45deg, #3ce041, #33d13b);
+      color: #FFFFFF;
+    }
+
     .upcoming {
       background: linear-gradient(45deg, #FBC02D, #FBC02D);
       color: #000000;
-      border-radius: 10px;
-      box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
-      padding: 7px 20px;
     }
 
     .countdown {
       margin-top: 10px;
       font-weight: bold;
     }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #52525200;
+      color: rgb(0, 0, 0);
+    }
   </style>
 </head>
 
 <body>
+  <div class="calculator-container">
+    <a href="index.html" class="back-button">
+      <button style="cursor: pointer;
+                    transition: background-color 0.4s;
+                    background-color: #f0f0f0;
+                    border: 2px solid #d1d1d123;
+                    border-radius: 12px;
+                    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1), -3px -3px 6px rgba(255, 255, 255, 0.8);
+                    padding: 1em; font-size: 20px;">
+        BACK
+      </button>
+    </a>
+    <p>Give it a few seconds to load</p>
+
+    <div class="session" id="sydney">
+      <span><strong>Sydney Session</strong></span>
+      <span id="sydney-status"></span>
+      <div id="sydney-countdown" class="countdown"></div>
+    </div>
+
+    <div class="session" id="tokyo">
+      <span><strong>Tokyo Session</strong></span>
+      <span id="tokyo-status"></span>
+      <div id="tokyo-countdown" class="countdown"></div>
+    </div>
+
+    <div class="session" id="london">
+      <span><strong>London Session</strong></span>
+      <span id="london-status"></span>
+      <div id="london-countdown" class="countdown"></div>
+    </div>
+
+    <div class="session" id="new-york">
+      <span><strong>New York Session</strong></span>
+      <span id="new-york-status"></span>
+      <div id="new-york-countdown" class="countdown"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Crypto Cartel - Made with ❤️ by Costandino. All rights reserved.</p>
+  </footer>
 
   <script>
     const sessions = [
-      { id: 'sydney', start: 23, end: 8 }, // Sydney: 11:00 pm to 08:00 am SAST
-      { id: 'tokyo', start: 1, end: 10 },  // Tokyo: 01:00 am to 10:00 am SAST
-      { id: 'london', start: 9, end: 18 }, // London: 09:00 am to 06:00 pm SAST
-      { id: 'new-york', start: 14, end: 23 } // New York: 02:00 pm to 11:00 pm SAST
+      { id: 'sydney', start: 23, end: 8 },
+      { id: 'tokyo', start: 1, end: 10 },
+      { id: 'london', start: 9, end: 18 },
+      { id: 'new-york', start: 14, end: 23 }
     ];
 
     function updateSessionStatus(session) {
@@ -105,43 +167,6 @@
     }, 1000);
 
   </script>
-
-<a href="index.html" class="back-button">
-  <button style="cursor: pointer;
-                transition: background-color 0.4s;
-                background-color: #f0f0f0;
-                border: 2px solid #d1d1d123;
-                border-radius: 12px;
-                box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1), -3px -3px 6px rgba(255, 255, 255, 0.8);
-                padding: 1em; font-size: 20px;">
-    BACK
-  </button>
-</a>
-<br>
-  <div class="session" id="sydney">
-    <span><strong>Sydney Session</strong></span>
-    <span id="sydney-status"></span>
-    <div id="sydney-countdown" class="countdown"></div>
-  </div>
-
-  <div class="session" id="tokyo">
-    <span><strong>Tokyo Session</strong></span>
-    <span id="tokyo-status"></span>
-    <div id="tokyo-countdown" class="countdown"></div>
-  </div>
-
-  <div class="session" id="london">
-    <span><strong>London Session</strong></span>
-    <span id="london-status"></span>
-    <div id="london-countdown" class="countdown"></div>
-  </div>
-
-  <div class="session" id="new-york">
-    <span><strong>New York Session</strong></span>
-    <span id="new-york-status"></span>
-    <div id="new-york-countdown" class="countdown"></div>
-  </div>
-
 </body>
 
 </html>

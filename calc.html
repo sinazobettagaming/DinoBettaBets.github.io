@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="calculator-container">
+        <h1
+            style="background-color: #f0f0f0; border: 2px solid #d1d1d100; border-radius: 16px; box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.8); padding: 10px; text-align: center; border-radius: 10px;">
+            CRYPTO CARTEL CALC <span style="font-size: small; font-weight: 100; color: rgb(251, 20, 20);">v2.3</span>
+        </h1>
+        <p>~<strong> 15m </strong>Trade Volume ~</p>
+        <style>
+            @media (max-width: 600px) {
+                .button-container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                a {
+                    text-align: center;
+                    margin: 10px 0;
+                }
+
+                button {
+                    flex-grow: 1;
+                    max-width: 200px;
+                    width: 100%;
+                    margin: 0 5px;
+                }
+            }
+        </style>
+
+        <div class="button-container">
+            <a href="index.html">
+                <button id="topButton" style="cursor: pointer;
+                        transition: background-color 0.4s;
+                        background-color: #f0f0f0;
+                        border: 2px solid #d1d1d123;
+                        border-radius: 12px;
+                        box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1), -3px -3px 6px rgba(255, 255, 255, 0.8);
+                        padding: 1em; font-size: 20px;">
+                   BACK
+                </button>
+            </a>
+        </div>
+        <div>
+            <br>
+            <label class="neumorphic-label" for="usdAmount"><strong>USD Amount:</strong></label>
+            <input type="number" id="usdAmount" placeholder="Enter USD amount">
+        </div>
+        <div>
+            <br>
+            <label class="neumorphic-label" for="stopValue"><strong>Stop Value:</strong></label>
+            <input type="number" id="stopValue" step="0.0001" placeholder="Enter stop value">
+        </div>
+        <div>
+            <br>
+            <label class="neumorphic-label" for="stopLossPercentage"><strong><span
+                        style="color: rgb(223, 67, 67);">Risk</span>
+                    Ratio:</strong></label>
+            <input type="number" id="stopLossPercentage" step="0.1" placeholder="Eg: Ratio: 1">
+        </div>
+        <div>
+            <br>
+            <label class="neumorphic-label" for="riskToRewardRatio"><strong><span
+                        style="color: rgb(56, 222, 47);">Reward</span>
+                    Ratio:</strong></label>
+            <input type="number" id="riskToRewardRatio" step="0.1" placeholder="Eg: Ratio: 2">
+        </div>
+        <div>
+            <br>
+            <label class="neumorphic-label" for="positionType"><strong>Position Type:</strong></label>
+            <select id="positionType">
+                <option value="long">Long</option>
+                <option value="short">Short</option>
+            </select>
+        </div>
+        <div>
+            <br>
+            <label class="neumorphic-label" for="currentPrice"><strong>Current Coin Value:</strong></label>
+            <input type="number" id="currentPrice" step="0.0001" placeholder="Enter current price">
+        </div>
+        <br>
+        <div style="text-align: center;">
+            <button onclick="calculatePositionSize()" style="padding: 1em; font-size: 20px;">
+                <strong>CALCULATE</strong></button>
+        </div>
+        <p id="stopLoss"></p>
+        <p id="close10Percent"></p>
+        <p id="close80Percent"></p>
+    </div>
+
+    <div id="resultContainer"></div>
+    <!-- Footer -->
+    <br>
+    <footer style="text-align: center; padding: 10px; background-color: #52525200; color: rgb(0, 0, 0);">
+        <p>&copy; 2024 Crypto Cartel - Made with ❤️ by Costandino. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -12,52 +12,26 @@
     <div class="calculator-container">
         <h1
             style="background-color: #f0f0f0; border: 2px solid #d1d1d100; border-radius: 16px; box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.8); padding: 10px; text-align: center; border-radius: 10px;">
-            CRYPTO CARTEL TOOLS <span style="font-size: small; font-weight: 100; color: rgb(251, 20, 20);">v3</span>
+            CRYPTO CARTEL TOOLS <span style="font-size: small; font-weight: 100; color: rgb(251, 20, 20);">v3.1</span>
         </h1>
         <p>~ WELCOME ~</p>
-        <style>
-            .button-container {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-            }
-
-            a {
-                text-align: center;
-                margin: 10px 0;
-            }
-
-            button {
-                width: 100%;
-                margin: 5px 0;
-                cursor: pointer;
-                transition: background-color 0.4s;
-                background-color: #f0f0f0;
-                border: 2px solid #d1d1d123;
-                border-radius: 12px;
-                box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1), -3px -3px 6px rgba(255, 255, 255, 0.8);
-                padding: 1em; 
-                font-size: 20px;
-            }
-        </style>
 
         <div class="button-container">
             <a href="prices.html">
-                <button id="topButton">
-                    LIVE PRICES
+                <button class="neumorphic-button" id="topButton">
+                    <strong>LIVE PRICES</strong>
                 </button>
             </a>
 
             <a href="calc.html">
-              <button id="topButton">
-                  CALCULATOR
-              </button>
-          </a>
+                <button class="neumorphic-button" id="topButton">
+                    <strong>CALCULATOR</strong> 
+                </button>
+            </a>
 
             <a href="timer.html">
-                <button id="topButton">
-                    TRADING HOURS
+                <button class="neumorphic-button" id="topButton">
+                    <strong>TRADING HOURS</strong> 
                 </button>
             </a>
         </div>
@@ -69,6 +43,21 @@
         </footer>
 
         <script src="script.js"></script>
-    </body>
+    </div>
+
+    <style>
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        a {
+            text-align: center;
+            margin: 10px 0;
+        }
+    </style>
+</body>
 
 </html>

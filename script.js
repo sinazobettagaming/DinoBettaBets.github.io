@@ -58,7 +58,7 @@ function calculatePositionSize() {
       ? currentPrice + 0.8 * targetProfit
       : currentPrice - 0.8 * targetProfit;
 
-  var positionSize = usdAmount / stopLossAmount;
+  var positionSize = usdAmount / stopValue;
 
   displayResult([
     `Stop Loss: ${stopLoss.toFixed(4)}`,
